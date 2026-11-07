@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galeri Vote Foto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Galeri Vote Foto</h1>
+  <p>Klik foto untuk memperbesar, tekan ♥ untuk memberi vote.</p>
+</header>
+
+<main>
+  <section id="winner" class="winner" hidden>
+    <div class="badge">👑 Vote Terbanyak</div>
+    <figure>
+      <img id="winnerImg" alt="Foto dengan vote terbanyak">
+      <figcaption><span id="winnerName"></span> · <strong id="winnerVotes"></strong> vote</figcaption>
+    </figure>
+  </section>
+
+  <p id="status" class="status">Memuat foto…</p>
+  <section id="grid" class="grid"></section>
+</main>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" aria-label="Tutup">×</button>
+  <button class="lb-nav prev" aria-label="Sebelumnya">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav next" aria-label="Berikutnya">›</button>
+  <div class="lb-bar">
+    <span id="lbName"></span>
+    <button id="lbVote" class="vote-btn"></button>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
